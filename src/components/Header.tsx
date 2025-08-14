@@ -26,7 +26,7 @@ const Header = () => {
 
   const handleOrderNow = () => {
     window.open(
-      "https://wa.me/917034567890?text=Hi%20I%20want%20to%20order%20medicines",
+      "https://wa.me/919847334455?text=Hi%20I%20want%20to%20order%20medicines",
       "_blank"
     );
   };
@@ -55,7 +55,7 @@ const Header = () => {
             {/* Center Navigation */}
             <div className="absolute left-1/2 transform -translate-x-1/2">
               <nav className="flex items-center">
-                <div className="flex items-center bg-white/10 backdrop-blur-md rounded-full p-1 border border-white/20 shadow-soft">
+                <div className="flex items-center bg-gradient-to-r from-medical/20 to-medical-dark/20 backdrop-blur-md rounded-full p-1 border border-medical-light/30 shadow-soft">
                   <button
                     onClick={() => scrollToSection("home")}
                     className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-300 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:shadow-glow hover:scale-105 active:scale-95 group"

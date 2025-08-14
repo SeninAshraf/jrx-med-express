@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Mail, Instagram } from "lucide-react";
+import { MapPin, Mail, Instagram, Phone } from "lucide-react";
 
 const Footer = () => {
   const handleOrderNow = () => {
     window.open(
-      "https://wa.me/917034567890?text=Hi%20I%20want%20to%20order%20medicines",
+      "https://wa.me/919847334455?text=Hi%20I%20want%20to%20order%20medicines",
       "_blank"
     );
   };
@@ -94,6 +94,14 @@ const Footer = () => {
                 >
                   <Mail className="w-5 h-5 text-primary group-hover:text-primary-glow" />
                   <span>inventixx3@gmail.com</span>
+                </a>
+
+                <a
+                  href="tel:+919847334455"
+                  className="flex items-center space-x-3 text-secondary-foreground/80 hover:text-secondary-foreground transition-colors group p-3 rounded-lg hover:bg-primary/5"
+                >
+                  <Phone className="w-5 h-5 text-primary group-hover:text-primary-glow" />
+                  <span>+91 98473 34455</span>
                 </a>
               </div>
             </div>

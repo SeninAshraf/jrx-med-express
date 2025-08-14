@@ -15,7 +15,7 @@ const WhatsAppFloat = () => {
 
   const handleWhatsAppClick = () => {
     window.open(
-      "https://wa.me/917034567890?text=Hi%20I%20want%20to%20order%20medicines",
+      "https://wa.me/919847334455?text=Hi%20I%20want%20to%20order%20medicines",
       "_blank"
     );
   };
