@@ -26,7 +26,7 @@ const HeroSection = () => {
           alt="Medicine delivery service"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-teal-600/90 via-blue-700/90 to-blue-900/95"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       {/* Content */}

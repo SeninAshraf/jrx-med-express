@@ -35,14 +35,14 @@ const Header = () => {
     <>
       {/* Desktop Header */}
       <header
-        className={`hidden md:block fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`hidden md:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-background/95 backdrop-blur-md shadow-soft"
-            : "bg-transparent"
+            ? "bg-white/95 backdrop-blur-xl shadow-xl border-b border-white/20"
+            : "bg-gradient-to-b from-black/20 to-transparent backdrop-blur-sm"
         }`}
       >
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between relative">
             {/* Logo */}
             <div className="flex items-center space-x-3">
               <img
@@ -52,36 +52,54 @@ const Header = () => {
               />
             </div>
 
-            {/* Desktop Navigation */}
-            <nav className="flex items-center space-x-8">
-              <button
-                onClick={() => scrollToSection("home")}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+            {/* Center Navigation */}
+            <div className="absolute left-1/2 transform -translate-x-1/2">
+              <nav className="flex items-center">
+                <div className="flex items-center bg-white/10 backdrop-blur-md rounded-full p-1 border border-white/20 shadow-soft">
+                  <button
+                    onClick={() => scrollToSection("home")}
+                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-300 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:shadow-glow hover:scale-105 active:scale-95 group"
+                  >
+                    <span className="relative z-10">Home</span>
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </button>
+                  <button
+                    onClick={() => scrollToSection("features")}
+                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-300 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:shadow-glow hover:scale-105 active:scale-95 group"
+                  >
+                    <span className="relative z-10">Services</span>
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </button>
+                  <button
+                    onClick={() => scrollToSection("how-it-works")}
+                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-300 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:shadow-glow hover:scale-105 active:scale-95 group"
+                  >
+                    <span className="relative z-10">How It Works</span>
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </button>
+                  <button
+                    onClick={() => scrollToSection("contact")}
+                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-300 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:shadow-glow hover:scale-105 active:scale-95 group"
+                  >
+                    <span className="relative z-10">Contact</span>
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </button>
+                </div>
+              </nav>
+            </div>
+
+            {/* Right Side - Order Now Button */}
+            <div className="flex items-center">
+              <Button
+                variant="medical"
+                size="sm"
+                onClick={handleOrderNow}
+                className="px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 bg-gradient-to-r from-medical to-medical-dark hover:from-medical-dark hover:to-medical border-2 border-medical-light/30 hover:border-medical-light/60"
               >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection("features")}
-                className="text-foreground hover:text-primary transition-colors font-medium"
-              >
-                Services
-              </button>
-              <button
-                onClick={() => scrollToSection("how-it-works")}
-                className="text-foreground hover:text-primary transition-colors font-medium"
-              >
-                How It Works
-              </button>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="text-foreground hover:text-primary transition-colors font-medium"
-              >
-                Contact
-              </button>
-              <Button variant="medical" size="sm" onClick={handleOrderNow}>
+                <Phone className="w-4 h-4 mr-2" />
                 Order Now
               </Button>
-            </nav>
+            </div>
           </div>
         </div>
       </header>
