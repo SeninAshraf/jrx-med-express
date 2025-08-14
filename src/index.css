@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,6 +8,14 @@ All colors MUST be HSL.
 */
 
 @layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
   :root {
     --background: 0 0% 100%;
     --foreground: 216 12% 8%;
@@ -17,18 +26,18 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 216 12% 8%;
 
-    /* JRX Brand Colors */
-    --primary: 174 100% 35%; /* Teal #00B1A0 */
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 174 100% 45%;
-    
-    --secondary: 229 57% 40%; /* Blue #2F3E9E */
-    --secondary-foreground: 0 0% 100%;
-    --secondary-glow: 229 57% 50%;
+    /* JRX Brand Colors - Matching Logo */
+    --primary: 229 50% 40%; /* #304199 */
+--primary-foreground: 0 0% 100%;
+--primary-glow: 229 50% 50%;
 
-    --medical-accent: 174 100% 35%;
-    --medical-light: 174 50% 90%;
-    --medical-dark: 174 100% 25%;
+    --secondary: 225 3% 13%; /* #231F20 */
+--secondary-foreground: 0 0% 98%;
+    --secondary-glow: 245 58% 61%;
+
+    --medical-accent: 186 100% 42%;
+    --medical-light: 186 60% 90%;
+    --medical-dark: 186 100% 32%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -51,13 +60,16 @@ All colors MUST be HSL.
 
     /* Professional Shadows */
     --shadow-soft: 0 2px 10px hsl(var(--primary) / 0.1);
-    --shadow-medium: 0 4px 20px hsl(var(--primary) / 0.15);
-    --shadow-strong: 0 8px 30px hsl(var(--primary) / 0.2);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
+    --shadow-medium: 0 4px 20px hsl(var(--primary) / 0.15), 0 2px 6px hsl(var(--primary) / 0.1);
+    --shadow-strong: 0 8px 30px hsl(var(--primary) / 0.2), 0 4px 10px hsl(var(--primary) / 0.15);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3), 0 0 20px hsl(var(--primary-glow) / 0.2);
+    --shadow-3d: 0 10px 30px -5px hsl(var(--primary) / 0.3), 0 5px 15px -5px hsl(var(--primary) / 0.2);
 
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Enhanced Animations */
+    --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-bounce: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-float: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-3d: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     
     /* Enhanced shadows for mobile */
     --shadow-mobile: 0 4px 20px -2px hsl(var(--primary) / 0.15);
@@ -82,6 +94,12 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  @keyframes popup {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+  }
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -95,8 +113,8 @@ All colors MUST be HSL.
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 225 3% 13%;
+--secondary-foreground: 0 0% 98%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;

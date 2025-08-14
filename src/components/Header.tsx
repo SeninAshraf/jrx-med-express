@@ -48,7 +48,7 @@ const Header = () => {
               <img
                 src={jrxLogoUrl}
                 alt="JRX Delivery - Janatha Pharma"
-                className="h-10 w-auto md:h-12 hover:scale-105 transition-transform duration-300"
+                className="h-12 w-auto md:h-16 hover:scale-105 transition-all duration-500"
               />
             </div>
 
@@ -58,28 +58,28 @@ const Header = () => {
                 <div className="flex items-center bg-gradient-to-r from-medical/20 to-medical-dark/20 backdrop-blur-md rounded-full p-1 border border-medical-light/30 shadow-soft">
                   <button
                     onClick={() => scrollToSection("home")}
-                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-300 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:shadow-glow hover:scale-105 active:scale-95 group"
+                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-500 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:shadow-glow hover:scale-105 active:scale-95 group"
                   >
                     <span className="relative z-10">Home</span>
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </button>
                   <button
                     onClick={() => scrollToSection("features")}
-                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-300 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:shadow-glow hover:scale-105 active:scale-95 group"
+                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-500 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:shadow-glow hover:scale-105 active:scale-95 group"
                   >
                     <span className="relative z-10">Services</span>
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </button>
                   <button
                     onClick={() => scrollToSection("how-it-works")}
-                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-300 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:shadow-glow hover:scale-105 active:scale-95 group"
+                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-500 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:shadow-glow hover:scale-105 active:scale-95 group"
                   >
                     <span className="relative z-10">How It Works</span>
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </button>
                   <button
                     onClick={() => scrollToSection("contact")}
-                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-300 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:shadow-glow hover:scale-105 active:scale-95 group"
+                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-500 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:shadow-glow hover:scale-105 active:scale-95 group"
                   >
                     <span className="relative z-10">Contact</span>
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -94,7 +94,7 @@ const Header = () => {
                 variant="medical"
                 size="sm"
                 onClick={handleOrderNow}
-                className="px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 bg-gradient-to-r from-medical to-medical-dark hover:from-medical-dark hover:to-medical border-2 border-medical-light/30 hover:border-medical-light/60"
+                className="px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-500 bg-gradient-to-r from-medical to-medical-dark hover:from-medical-dark hover:to-medical border-2 border-medical-light/30 hover:border-medical-light/60"
               >
                 <Phone className="w-4 h-4 mr-2" />
                 Order Now
