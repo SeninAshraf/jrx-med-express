@@ -88,9 +88,18 @@ const ContactSection = () => {
                     <Clock className="w-6 h-6 text-primary group-hover:text-primary-glow group-hover:animate-pulse" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-2 font-heading tracking-tight group-hover:text-primary-glow transition-all duration-300">Working Hours</h3>
-                    <p className="text-muted-foreground font-sans">24/7 Service</p>
-                    <p className="text-sm text-muted-foreground/70 mt-1 font-sans">Always available for you</p>
+                    <h3 className="text-lg font-semibold mb-2 font-heading tracking-tight group-hover:text-primary-glow transition-all duration-300">Service Hours</h3>
+                    <div className="space-y-1">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <p className="text-muted-foreground font-sans font-semibold">Emergency: 24/7</p>
+                      </div>
+                      <p className="text-sm text-muted-foreground/70 ml-4 font-sans">Round the clock service</p>
+                      <div className="mt-2">
+                        <p className="text-muted-foreground font-sans font-medium">Regular Orders:</p>
+                        <p className="text-sm text-muted-foreground/70 font-sans">Mon-Sun: 8 AM - 10 PM</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

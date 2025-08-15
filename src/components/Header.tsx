@@ -12,7 +12,8 @@ const Header = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    // Use passive event listener for better performance
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -37,7 +38,7 @@ const Header = () => {
       <header
         className={`hidden md:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-xl shadow-xl border-b border-white/20"
+            ? "bg-white/95 backdrop-blur-xl border-b border-gray-100/50"
             : "bg-gradient-to-b from-black/20 to-transparent backdrop-blur-sm"
         }`}
       >
@@ -48,7 +49,7 @@ const Header = () => {
               <img
                 src={jrxLogoUrl}
                 alt="JRX Delivery - Janatha Pharma"
-                className="h-12 w-auto md:h-16 hover:scale-105 transition-all duration-500"
+                className="h-12 w-auto md:h-14 scale-x-150 hover:scale-x-160 transition-all duration-500"
               />
             </div>
 
@@ -58,28 +59,28 @@ const Header = () => {
                 <div className="flex items-center bg-gradient-to-r from-medical/20 to-medical-dark/20 backdrop-blur-md rounded-full p-1 border border-medical-light/30 shadow-soft">
                   <button
                     onClick={() => scrollToSection("home")}
-                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-500 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:shadow-glow hover:scale-105 active:scale-95 group"
+                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-500 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80  hover:scale-105 active:scale-95 group"
                   >
                     <span className="relative z-10">Home</span>
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </button>
                   <button
                     onClick={() => scrollToSection("features")}
-                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-500 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:shadow-glow hover:scale-105 active:scale-95 group"
+                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-500 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80  hover:scale-105 active:scale-95 group"
                   >
                     <span className="relative z-10">Services</span>
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </button>
                   <button
                     onClick={() => scrollToSection("how-it-works")}
-                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-500 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:shadow-glow hover:scale-105 active:scale-95 group"
+                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-500 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80  hover:scale-105 active:scale-95 group"
                   >
                     <span className="relative z-10">How It Works</span>
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </button>
                   <button
                     onClick={() => scrollToSection("contact")}
-                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-500 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:shadow-glow hover:scale-105 active:scale-95 group"
+                    className="relative px-6 py-3 rounded-full text-foreground font-semibold transition-all duration-500 ease-out hover:text-white hover:bg-gradient-to-r hover:from-primary hover:to-primary/80  hover:scale-105 active:scale-95 group"
                   >
                     <span className="relative z-10">Contact</span>
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -94,7 +95,7 @@ const Header = () => {
                 variant="medical"
                 size="sm"
                 onClick={handleOrderNow}
-                className="px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-500 bg-gradient-to-r from-medical to-medical-dark hover:from-medical-dark hover:to-medical border-2 border-medical-light/30 hover:border-medical-light/60"
+                className="px-8 py-3 rounded-full font-bold transform hover:scale-105 transition-all duration-500 bg-gradient-to-r from-medical to-medical-dark hover:from-medical-dark hover:to-medical border-2 border-medical-light/30 hover:border-medical-light/60"
               >
                 <Phone className="w-4 h-4 mr-2" />
                 Order Now
@@ -108,7 +109,7 @@ const Header = () => {
       <header
         className={`md:hidden fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled || isMobileMenuOpen
-            ? "bg-background/95 backdrop-blur-md shadow-soft"
+            ? "bg-background/95 backdrop-blur-md border-b border-gray-100/30"
             : "bg-background/90 backdrop-blur-sm"
         }`}
       >
@@ -119,7 +120,7 @@ const Header = () => {
               <img
                 src={jrxLogoUrl}
                 alt="JRX Delivery - Janatha Pharma"
-                className="h-8 w-auto"
+                className="h-12 w-auto"
               />
             </div>
 
@@ -203,7 +204,7 @@ const Header = () => {
                   <Button
                     variant="medical"
                     onClick={handleOrderNow}
-                    className="w-full py-4 text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                    className="w-full py-4 text-base font-semibold rounded-xl transform hover:scale-105 transition-all duration-300"
                   >
                     <Phone className="w-5 h-5 mr-2" />
                     Order Now
